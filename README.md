@@ -1,22 +1,26 @@
 # Exploring mechanisms of acclimation responses to thermal and saline stress in the cnidarian, _Nematostella vectensis_ 
 
 ## Background and study design: 
-Starlet sea anemones (_Nematostella vectensis_) are cnidarians endemic to estuarine environments along the Atlantic coast of North America. Across this broad latitudinal range, natural growth habitats vary drastically, particularly in terms of temperature, salinity, reactive oxidative species (ROS), and pollution. Using anemones collected from New Hampshire, USA, we aimed to explore interactions between thermal and saline stress, to determine their capacity for plasticity, and identify underlying signaling pathways. We acclimated anemones using a two-factor design — warm and cold treatments at 16°C or 24°C, and high and low salinity treatments at 30‰ or 15‰ ASW. Leveraging the clonal nature of these anemones, 4 clones from 8 genotypes were used for the 4 treatment groups (i.e., genotype represents a random effect). After an acclimation period of 2 weeks, routine metabolic rates (RMRs), enzyme activities of citrate synthase (CS) which is a marker of mitochondrial activity, and the osmoregulatory activities of ATPases including Na+-K+ ATPase (NKA) were measured acutely - both at their acclimation temperature, and at the orthogonal temperature. Further, two markers of ROS damage, namely protein carbonyl content (PCC) and thiobarbituric acid reactive substances (TBARS) were also measured at the respective acclimation temperatures (these are endpoint measures). 
+Starlet sea anemones (_Nematostella vectensis_) are cnidarians endemic to estuarine environments along the Atlantic coast of North America. Across this broad latitudinal range, natural growth habitats vary drastically, particularly in terms of temperature, salinity, reactive oxidative species (ROS), and pollution. Using anemones collected from New Hampshire, USA, we aimed to explore the effects of interactions between thermal and saline stress characterize their acclimation responses, and determine their capacity for plasticity. The anemones were acclimated using a two-factor design — warm and cold treatments at 16°C or 24°C, and high and low salinity treatments at 30‰ or 15‰ ASW. Leveraging the clonal nature of these anemones, 4 clones from 8 genotypes were used for the 4 treatment groups (i.e., genotype represents a random effect). After an acclimation period of 2 weeks, routine metabolic rates (RMRs), enzyme activities of citrate synthase (CS) which is a marker of mitochondrial activity, and the osmoregulatory activities of ATPases were measured acutely - both at their acclimation temperature, and at the orthogonal temperature. Further, two markers of ROS damage, namely protein carbonyl content (PCC) and thiobarbituric acid reactive substances (TBARS) were also measured at the respective acclimation temperatures (these are endpoint measures). 
 
 ## Hypothesis, predictions, goals:
-I hypothesize that trade-offs in acclimation responses should be largely seen in metabolic and osmoregulatory pathways as these are major energetic challenges faced by the anemones. My specific predictions include:
+
+Hypothesis: Trade-offs in acclimation responses should be largely seen in metabolic and osmoregulatory pathways as these are major energetic challenges faced by the anemones.
+Predictions:
 1.	Metabolic rate should be higher at the warmer temperatures, with possible metabolic depression seen at low temperatures.
-2.	Mitochondrial biogenesis may be a preferred mode of compensation for increased metabolic demand at cold temperatures. 
+2.	Mitochondrial biogenesis (indicated by increased CS activity) may be a preferred mode of compensation for increased metabolic demand at cold temperatures. 
 3.	Osmoregulation through NKA is an energetically expensive process, and is likely the primary determinant of metabolic demand. Osmoregulatory pathways will be more active under high salinity conditions.
 
-This study is exploratory and is meant to understand/establish stress response mechanisms in this study system. Using these measures, I want to understand how each of these variables are modified in response to either or both of these stressors. 
+We plan to analyse the dataset using multivariate models, as these responses measures are not independent.
 
 ## Data description: 
-The updated datafile, "TxS_final.csv" contains all the data that has been collected so far in this project. 
+The datafile, "TxS_final.csv" contains all the data that has been collected so far in this project. 
 
 This file includes columns on the acclimation and test conditions for each data point - acclimation temperature ('AT') in degrees Celcius, acclimation salinity ('AS'), in parts per thousand (ppt), and test temperature ('TT') in degrees Celcius. 
 
 The column 'genotype' serves as an ID for which genotype the data point was collected from.
+
+The column 'mass' refers to the mass (in mg) of the sample used for the corresponding measurement.
 
 The column 'var_name' refers to the name of the variable measured. This can be RMR, CS, PCC, ATPase or TBARS (so far). 
 
