@@ -18,8 +18,6 @@ This file includes columns on the acclimation and test conditions for each data 
 
 The column 'genotype' serves as an ID for which genotype the data point was collected from.
 
-The column 'BSA' refers to the protein content in the sample used, expressed in mg/mL. Protein content was estimated using the Bradford Assay. The final enzyme activities are standardised using the protein content.
-
 The column 'var_name' refers to the name of the variable measured. This can be RMR, CS, PCC, or TBARS (so far). 
 
 The column 'var_measure' refers to the value of the variable measured. 
