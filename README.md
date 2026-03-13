@@ -6,7 +6,7 @@ Starlet sea anemones (_Nematostella vectensis_) are cnidarians endemic to estuar
 ## Hypothesis, predictions, goals:
 I hypothesize that trade-offs in acclimation responses should be largely seen in metabolic and osmoregulatory pathways as these are major energetic challenges faced by the anemones. My specific predictions include:
 1.	Metabolic rate should be higher at the warmer temperatures, with possible metabolic depression seen at low temperatures.
-2.	Mitochondrial biogenesis may be a preferred mode of compensation for increased metabolic demand. 
+2.	Mitochondrial biogenesis may be a preferred mode of compensation for increased metabolic demand at cold temperatures. 
 3.	Osmoregulation through NKA is an energetically expensive process, and is likely the primary determinant of metabolic demand. Osmoregulatory pathways will be more active under high salinity conditions.
 
 This study is exploratory and is meant to understand/establish stress response mechanisms in this study system. Using these measures, I want to understand how each of these variables are modified in response to either or both of these stressors. 
