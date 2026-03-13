@@ -1,1 +1,29 @@
-# Multivariate_TxS_Anemone
+# Exploring mechanisms of acclimation responses to thermal and saline stress in the cnidarian, _Nematostella vectensis_ 
+
+## Background and study design: 
+Starlet sea anemones (_Nematostella vectensis_) are cnidarians endemic to estuarine environments along the Atlantic coast of North America. Across this broad latitudinal range, natural growth habitats vary drastically, particularly in terms of temperature, salinity, reactive oxidative species (ROS), and pollution. Using anemones collected from New Hampshire, USA, we aimed to explore interactions between thermal and saline stress, to determine their capacity for plasticity, and identify underlying signaling pathways. We acclimated anemones using a two-factor design — warm and cold treatments at 16°C or 24°C, and high and low salinity treatments at 30‰ or 15‰ ASW. Leveraging the clonal nature of these anemones, 4 clones from 8 genotypes were used for the 4 treatment groups (i.e., genotype represents a random effect). After an acclimation period of 2 weeks, routine metabolic rates (RMRs), enzyme activities of citrate synthase (CS) which is a marker of mitochondrial activity, and the osmoregulatory activities of ATPases including Na+-K+ ATPase (NKA) were measured acutely - both at their acclimation temperature, and at the orthogonal temperature. Further, two markers of ROS damage, namely protein carbonyl content (PCC) and thiobarbituric acid reactive substances (TBARS) were also measured at the respective acclimation temperatures (these are endpoint measures). 
+
+## Predictions and goals:
+I hypothesize that trade-offs in acclimation responses should be largely seen in metabolic and osmoregulatory pathways as these are major energetic challenges faced by the anemones. My specific predictions include:
+1.	Metabolic rate should be higher at the warmer temperatures, with possible metabolic depression seen at low temperatures.
+2.	Mitochondrial biogenesis may be a preferred mode of compensation for increased metabolic demand. 
+3.	Osmoregulation through NKA is an energetically expensive process, and is likely the primary determinant of metabolic demand. Osmoregulatory pathways will be more active under high salinity conditions.
+
+This study is exploratory and is meant to understand/establish stress response mechanisms in this study system. Using these measures, I want to understand how each of these variables are modified in response to either or both of these stressors. 
+
+## Data description: 
+The updated datafile, "TxS_final.csv" contains all the data that has been collected so far in this project (this seems to be better practice). 
+
+This file includes columns on the acclimation and test conditions for each data point - acclimation temperature ('AT') in degrees Celcius, acclimation salinity ('AS'), in parts per thousand (ppt), and test temperature ('TT') in degrees Celcius. 
+
+The column 'genotype' serves as an ID for which genotype the data point was collected from.
+
+The column 'BSA' refers to the protein content in the sample used, expressed in mg/mL. Protein content was estimated using the Bradford Assay. The final enzyme activities are standardised using the protein content.
+
+The column 'var_name' refers to the name of the variable measured. This can be RMR, CS, PCC, or TBARS (so far). 
+
+The column 'var_measure' refers to the value of the variable measured. 
+
+The column 'units' refers to the units of the variable measured. 
+
+Finally, the columns 'day' and 'plate' are variables specific to the RMR measures. As the names suggest, these variables refer to the day that the experiment was run on and the plate ID of the microplate used.
