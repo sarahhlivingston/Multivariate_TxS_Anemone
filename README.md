@@ -12,7 +12,7 @@ I hypothesize that trade-offs in acclimation responses should be largely seen in
 This study is exploratory and is meant to understand/establish stress response mechanisms in this study system. Using these measures, I want to understand how each of these variables are modified in response to either or both of these stressors. 
 
 ## Data description: 
-The updated datafile, "TxS_final.csv" contains all the data that has been collected so far in this project (this seems to be better practice). 
+The updated datafile, "TxS_final.csv" contains all the data that has been collected so far in this project. 
 
 This file includes columns on the acclimation and test conditions for each data point - acclimation temperature ('AT') in degrees Celcius, acclimation salinity ('AS'), in parts per thousand (ppt), and test temperature ('TT') in degrees Celcius. 
 
