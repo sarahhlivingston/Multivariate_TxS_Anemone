@@ -36,4 +36,4 @@ The plan is to build a multivariate mixed model:
   - genotype is the random effect
   - RMR, CS, ATPases, PCC, TBARS are the response variables
 
-(question) PCC and TBARS are only measured at their test temperatures, they have different entries per level for test temperatures than RMR, CS, and ATPases. The plan is to try and include them in the main multivariate mixed model though. However, it is not unreasonable to analyse it separately in case that doesn't work out. These are _damage_ markers, versus RMR/CS/ATPases that are stress _response_ markers. 
+(question) PCC and TBARS are only measured at their acclimation temperatures, they have different entries per level for test temperatures than RMR, CS, and ATPases. The plan is to try and include them in the main multivariate mixed model though. However, it is not unreasonable to analyse it separately in case that doesn't work out. These are _damage_ markers, versus RMR/CS/ATPases that are stress _response_ markers. 
