@@ -29,3 +29,11 @@ The column 'var_measure' refers to the value of the variable measured.
 The column 'units' refers to the units of the variable measured. 
 
 Finally, the columns 'day' and 'plate' are variables specific to the RMR measures. As the names suggest, these variables refer to the day that the experiment was run on and the plate ID of the microplate used.
+
+## Next steps:
+The plan is to build a multivariate mixed model:
+  - AT, AS, TT are fixed effect
+  - genotype is the random effect
+  - RMR, CS, ATPases, PCC, TBARS are the response variables
+
+(question) PCC and TBARS are only measured at their test temperatures, they have different entries per level for test temperatures than RMR, CS, and ATPases. The plan is to try and include them in the main multivariate mixed model though. However, tt is not unreasonable to analyse it separately in case that doesn't work out. These are _damage_ markers, versus RMR/CS/ATPases that are stress _response_ markers. 
