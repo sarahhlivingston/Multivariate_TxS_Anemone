@@ -14,6 +14,14 @@ library(lmerTest)
 ## need to override some warnings
 ## control <- lmerControl(check.nobs.vs.nRE = "ignore")
 
+## FIXME: should include mass in this model ...
+## consider log(var_measure) ~ log(mass) + ....
+## (allometric scaling)
+## log(Y) = a + b*log(X)
+## equivalent to Y = a*X^b (if we exponentiate both sides)
+## for RMR : RMR = a*mass^0.75
+## so we'd expect to see a coefficient for log(mass) that's
+## a little below 1
 m0 <- lmer(var_measure ~ 0 + var_name:(AT*AS*TT) +
              (0+var_name|genotype),
            ##             (0 + var_name:(AT*AS*TT)|genotype),
