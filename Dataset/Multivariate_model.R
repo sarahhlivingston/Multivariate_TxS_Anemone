@@ -2,6 +2,7 @@ library(tidyverse)
 library(emmeans)
 library(lme4)
 
+options(contrasts = c("contr.sum", "contr.poly"), digits = 3)
 
 df1 <- read.csv("TxS_final.csv") %>%
   filter(var_name %in% c("RMR", "CS", "ATPase")) %>%
