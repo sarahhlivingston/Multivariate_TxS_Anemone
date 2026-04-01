@@ -17,3 +17,7 @@
    - `log_atp ~ AT * AS * TT + log_mass`: fixed effect for both models.
    - `(1 + TT | genotype)`: random effect for genotype at different test temperatures and with a random intercept
    - `cs(AT*AS*TT | genotype)`: Assumes a constant variance across all treatment combinations for each genotype
+
+01/04/2026 - SL
+1. Updated Multivariate_model.R script with diagnostic, inferential and prediction plots.
+2. Updated library loading for plotting.
