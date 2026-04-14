@@ -21,3 +21,8 @@
 01/04/2026 - SL
 1. Updated Multivariate_model.R script with diagnostic, inferential and prediction plots.
 2. Updated library loading for plotting.
+
+14/04/26 - SV
+1. Added model for TBARS, PCC in "ROS_damage_mlm.R"
+3. Tried to include (1 | 0 + day) as random effect to main model - this skewed results by a lot, I think this is because there's more resolution between days in RMR measures, but both CS and ATPase were done on a day each. I've chosen to exclude this random effect, can supplement manuscript with a small experiment showing variation in RMR measured across different days for the genotypes used - this is beyond the scope of this project though.
+4. Edited Multivariate_model.R script with contrast plots
