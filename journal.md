@@ -26,3 +26,4 @@
 1. Added model for TBARS, PCC in "ROS_damage_mlm.R"
 3. Tried to include (1 | 0 + day) as random effect to main model - this skewed results by a lot, I think this is because there's more resolution between days in RMR measures, but both CS and ATPase were done on a day each. I've chosen to exclude this random effect, can supplement manuscript with a small experiment showing variation in RMR measured across different days for the genotypes used - this is beyond the scope of this project though.
 4. Edited Multivariate_model.R script with contrast plots
+5. Maybe the CS diagnostics are odd in the first multivariate model because the CS values are also corrected to protein content and is thus smaller? It was also measured in "umol" change compared to ATPases, which are measured in "mmol".
