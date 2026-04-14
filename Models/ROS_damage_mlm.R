@@ -27,18 +27,40 @@ m2_final <- lmer(
     (1 | 0 + genotype:var_name),
   data = df2)
 
+#Diagnostics
+plot(simulateResiduals(m2_final))
 summary(m2_final)
-anova(m2_final)
 
-plot(simulateResiduals(m1_final))
-
+#emmeans
 em2 <- emmeans(m2_final, ~ AT * AS | var_name, type = "response")
-em2
 
+df_emmeans <- as.data.frame(confint(em2))
+levels(df_emmeans$AS) <- paste ((levels(df_emmeans$AS)), "ppt")
+levels(df_emmeans$AT) <- paste ((levels(df_emmeans$AT)), "C")
+
+#emmeans plot
+emmeans_plot <- ggplot(data = df_emmeans, aes(x = AT, y = emmean, group = var_name, colour = AT)) +
+  facet_grid(rows = vars(var_name), cols = vars(AS), scales = "free_y") +
+  geom_point(position = position_dodge(width = 0.5), 
+             size = 4) +
+  geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL),
+                position = position_dodge(width = 0.5),
+                width = 0.3,
+                linewidth = 0.75) +
+  scale_color_manual(values = c("deepskyblue3", "firebrick3")) +
+  labs(x = "Test temperature (*C)",
+       y = "log response") +
+  theme(strip.text.y = element_text(angle = 270))
+
+print(emmeans_plot)
+
+#contrasts
 contrast(em2,  by = "var_name")
 
-plotdf2 <- as.data.frame(confint(contrast(em2,  by = "var_name")))
-ggplot(data = plotdf2, aes(x = contrast, y = estimate, group = var_name, colour = var_name)) +
+df_contrast <- as.data.frame(confint(contrast(em2,  by = "var_name")))
+
+#contrasts plot
+contrast_plot <- ggplot(data = df_contrast, aes(x = contrast, y = estimate, group = var_name, colour = var_name)) +
   geom_point(aes(shape = var_name),
              position = position_dodge(width = 0.5), 
              size = 4) +
@@ -47,5 +69,7 @@ ggplot(data = plotdf2, aes(x = contrast, y = estimate, group = var_name, colour 
                 width = 0.3,
                 linewidth = 0.75) +
   geom_hline(yintercept = 0, linetype = "dashed") +
-  scale_color_manual(values = c("darkorchid", "plum3","deepskyblue3")) +
+  scale_color_manual(values = c("darkorchid", "plum3")) +
   scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+
+print(contrast_plot)
