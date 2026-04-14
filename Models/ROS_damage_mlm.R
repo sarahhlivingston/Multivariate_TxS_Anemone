@@ -12,6 +12,7 @@ theme_set(theme_linedraw() %+replace%
                   strip.text.y = element_text (size = 11, color = "black")))
 
 options(contrasts = c("contr.sum", "contr.poly"), digits = 3)
+
 df2 <- read.csv("TxS_final.csv") %>%
   filter(var_name %in% c("PCC", "TBARS")) %>%
   mutate(across(c(AT, AS, TT, genotype, var_name), as.factor)) %>%
