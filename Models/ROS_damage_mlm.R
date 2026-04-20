@@ -38,7 +38,6 @@ em2 <- emmeans(m2_final, ~ AT * AS | var_name, type = "response")
 
 df_emmeans <- as.data.frame(confint(em2))
 levels(df_emmeans$AS) <- paste ((levels(df_emmeans$AS)), "ppt")
-levels(df_emmeans$AT) <- paste ((levels(df_emmeans$AT)), "C")
 
 #emmeans plot
 emmeans_plot <- ggplot(data = df_emmeans, aes(x = AT, y = emmean, group = var_name, colour = AT)) +
@@ -50,7 +49,7 @@ emmeans_plot <- ggplot(data = df_emmeans, aes(x = AT, y = emmean, group = var_na
                 width = 0.3,
                 linewidth = 0.75) +
   scale_color_manual(values = c("deepskyblue3", "firebrick3")) +
-  labs(x = "Test temperature (*C)",
+  labs(x = "Test temperature (°C)",
        y = "log response") +
   theme(strip.text.y = element_text(angle = 270))
 
