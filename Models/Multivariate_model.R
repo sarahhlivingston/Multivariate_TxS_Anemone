@@ -32,7 +32,7 @@ m1_final <- lmer(
 )
 
 summary(m1_final)
-anova(m1_final)
+car::Anova(m1_final)
 
 ############################
 #        Diagnostics 
