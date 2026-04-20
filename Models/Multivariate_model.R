@@ -104,7 +104,7 @@ ggplot(ems_df, aes(x = as.factor(TT),
   scale_color_manual(values = c("16" = "#377eb8", "24" = "#e41a1c")) +
   labs(
     x = "Test temperature (°C)",
-    y = "Predicted trait value (log scale)",
+    y = "log response",
     color = "Acclimation temperature (°C)") +
   theme(legend.position = "bottom",
         strip.text.y = element_text(angle = 270))
