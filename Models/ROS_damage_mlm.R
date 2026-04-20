@@ -31,6 +31,8 @@ m2_final <- lmer(
 plot(simulateResiduals(m2_final))
 summary(m2_final)
 
+car::Anova(m2_final)
+
 #emmeans
 em2 <- emmeans(m2_final, ~ AT * AS | var_name, type = "response")
 
