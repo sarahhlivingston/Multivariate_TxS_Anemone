@@ -54,7 +54,7 @@ emmeans_plot <- ggplot(df_emmeans, aes(x = as.factor(AT),
   scale_color_manual(values = c("16" = "#377eb8", "24" = "#e41a1c")) +
   labs(
     x = "Acclimation temperature (°C)",
-    y = "Predicted trait value (log scale)",
+    y = "log response",
     color = "Acclimation temperature (°C)") +
   theme(legend.position = "bottom",
         strip.text.y = element_text(angle = 270))
