@@ -40,18 +40,24 @@ df_emmeans <- as.data.frame(confint(em2))
 levels(df_emmeans$AS) <- paste ((levels(df_emmeans$AS)), "ppt")
 
 #emmeans plot
-emmeans_plot <- ggplot(data = df_emmeans, aes(x = AT, y = emmean, group = var_name, colour = AT)) +
-  facet_grid(rows = vars(var_name), cols = vars(AS), scales = "free_y") +
-  geom_point(position = position_dodge(width = 0.5), 
+emmeans_plot <- ggplot(df_emmeans, aes(x = as.factor(AT), 
+                   y = if("response" %in% names(ems_df)) response else emmean, 
+                   color = as.factor(AT))) +
+  geom_point(position = position_dodge(width = 0.2), 
              size = 4) +
-  geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL),
-                position = position_dodge(width = 0.5),
-                width = 0.3,
-                linewidth = 0.75) +
-  scale_color_manual(values = c("deepskyblue3", "firebrick3")) +
-  labs(x = "Test temperature (°C)",
-       y = "log response") +
-  theme(strip.text.y = element_text(angle = 270))
+  geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL), 
+                position = position_dodge(width = 0.2),
+                width = 0.3, linewidth = 0.75) +
+  facet_grid(var_name ~ AS, scales = "free_y", 
+             labeller = labeller(AS = c("15" = "Salinity: 15 ppt", 
+                                        "30" = "Salinity: 30 ppt"))) +
+  scale_color_manual(values = c("16" = "#377eb8", "24" = "#e41a1c")) +
+  labs(
+    x = "Acclimation temperature (°C)",
+    y = "Predicted trait value (log scale)",
+    color = "Acclimation temperature (°C)") +
+  theme(legend.position = "bottom",
+        strip.text.y = element_text(angle = 270))
 
 print(emmeans_plot)
 
