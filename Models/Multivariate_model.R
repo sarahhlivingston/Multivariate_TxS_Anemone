@@ -92,7 +92,7 @@ ggplot(ems_df, aes(x = as.factor(TT),
                      y = if("response" %in% names(ems_df)) response else emmean, 
                      color = as.factor(AT), 
                      group = AT)) +
-  geom_line(linewidth = 1) +
+  geom_line(linewidth = 1, position = position_dodge(width = 0.2)) +
   geom_point(position = position_dodge(width = 0.2), 
              size = 4) +
   geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL), 
@@ -103,10 +103,11 @@ ggplot(ems_df, aes(x = as.factor(TT),
                                         "30" = "Salinity: 30 ppt"))) +
   scale_color_manual(values = c("16" = "#377eb8", "24" = "#e41a1c")) +
   labs(
-    x = "Test Temperature (°C)",
-    y = "Predicted Trait Value (Log Scale)",
-    color = "Acclimation Temperature (°C)") +
-  theme(legend.position = "bottom")
+    x = "Test temperature (°C)",
+    y = "Predicted trait value (log scale)",
+    color = "Acclimation temperature (°C)") +
+  theme(legend.position = "bottom",
+        strip.text.y = element_text(angle = 270))
 
 #contrast plot
 ggplot(data = df_contrasts, aes(x = contrast, y = estimate, group = var_name, colour = var_name)) +
