@@ -28,6 +28,6 @@ The `units` column refers to the units of the measured variable.
 Finally, the columns `day` and `plate` are variables specific to the RMR measures. As the names suggest, these variables refer to the day that the experiment was run on and the plate ID of the microplate used.
 
 ## Analysis and reproducibility
-The data was analysed using a multivariate mixed model. Further details are included in the project report, found as "BIO-708_report.pdf"
+The data was analysed using a multivariate mixed model. Further details are included in the project report, found as `BIO-708_report.pdf`
 
-The multivariate model containing RMR, CS and ATPase ("Multivariate_model.R") and the oxidative damage models ("ROS_damage_mlm.R") are both located in the `\Models` folder. The dataset used for these models is the `TxS_final.csv` within the `\Data` folder and can be used directly in both models.  
+The multivariate model containing RMR, CS and ATPase (`Multivariate_model.R`) and the oxidative damage models (`ROS_damage_mlm.R`) are both located in the `\Models` folder. The dataset used for these models is the `TxS_final.csv` within the `\Data` folder and can be used directly in both models.  
