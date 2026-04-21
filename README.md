@@ -7,9 +7,9 @@ Starlet sea anemones (_Nematostella vectensis_) are cnidarians endemic to estuar
 
 Hypothesis: Trade-offs in acclimation responses should be largely seen in metabolic and osmoregulatory pathways, as these are major energetic challenges faced by the anemones.
 Predictions:
-1.	Metabolic rate should be higher at the warmer temperatures, with possible metabolic depression seen at low temperatures.
-2.	Mitochondrial biogenesis (indicated by increased CS activity) may be a preferred mode of compensation for increased metabolic demand at cold temperatures. 
-3.	Osmoregulation through NKA is an energetically expensive process and is likely the primary determinant of metabolic demand. Osmoregulatory pathways will be more active under high salinity conditions.
+(1)	Routine metabolic rate and enzyme activities will increase with acute test temperature,
+(2)	Cold-acclimated anemones will exhibit higher routine metabolic rates and enzyme activities than warm-acclimated anemones when measured at a common test temperature, consistent with compensatory thermal acclimation, and   
+(3)	The magnitude of this acclimation response will differ between salinities, with acclimation effects expected to be strongest in the cold and high salinity-acclimated treatment.  
 
 We plan to analyze the dataset using multivariate models because the response measures are not independent.
 
@@ -30,13 +30,8 @@ The `units` column refers to the units of the measured variable.
 
 Finally, the columns `day` and `plate` are variables specific to the RMR measures. As the names suggest, these variables refer to the day that the experiment was run on and the plate ID of the microplate used.
 
-## Next steps:
-The plan is to build a multivariate mixed model:
-  - AT, AS, TT are fixed effects
-  - genotype is the random effect
-  - RMR, CS, ATPases, PCC, TBARS are the response variables
-
-(question) PCC and TBARS are only measured at their acclimation temperatures, therefore, they have different entries per level for test temperatures than RMR, CS, and ATPases. The plan is to include them in the main multivariate mixed model. However, it is not unreasonable to analyze it separately in case that doesn't work out. These are _damage_ markers, versus RMR/CS/ATPases that are stress _response_ markers. 
+## Analysis:
+The data was analysed using a multivariate mixed model. Further details are included in the project report, found as "BIO-708_report.pdf"
 
 ## Reproducibility
-The multivariate model containing RMR, CS and ATPase and the oxidative damage models are both located in the `\Models` folder. The dataset used for these models is the `TxS_final.csv` within the `\Data` folder. 
+The multivariate model containing RMR, CS and ATPase ("Multivariate_model.R") and the oxidative damage models ("ROS_damage_mlm.R") are both located in the `\Models` folder. The dataset used for these models is the `TxS_final.csv` within the `\Data` folder. 
