@@ -31,4 +31,4 @@ Finally, the columns `day` and `plate` are variables specific to the RMR measure
 The data was analysed using a multivariate mixed model. Further details are included in the project report, found as "BIO-708_report.pdf"
 
 ## Reproducibility
-The multivariate model containing RMR, CS and ATPase ("Multivariate_model.R") and the oxidative damage models ("ROS_damage_mlm.R") are both located in the `\Models` folder. The dataset used for these models is the `TxS_final.csv` within the `\Data` folder. 
+The multivariate model containing RMR, CS and ATPase ("Multivariate_model.R") and the oxidative damage models ("ROS_damage_mlm.R") are both located in the `\Models` folder. The dataset used for these models is the `TxS_final.csv` within the `\Data` folder and can be used directly in both models.  
