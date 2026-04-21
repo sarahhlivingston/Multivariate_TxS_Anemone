@@ -25,7 +25,9 @@ The `var_measure` column refers to the measured value of the variable.
 
 The `units` column refers to the units of the measured variable. 
 
-Finally, the columns `day` and `plate` are variables specific to the RMR measures. As the names suggest, these variables refer to the day that the experiment was run on and the plate ID of the microplate used.
+The columns `day` refer to the day that the experiment was run on.
+
+The column `plate` is specific to the RMR measures. As the name suggests, this refers to the plate ID of the microplate used to measure RMR.
 
 ## Analysis and reproducibility
 The data was analysed using a multivariate mixed model. Further details are included in the project report, found as `BIO-708_report.pdf`
