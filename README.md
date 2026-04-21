@@ -19,7 +19,7 @@ The `genotype` column serves as an ID indicating which genotype the data point w
 
 The column `mass` refers to the mass (in mg) of the sample used for the corresponding measurement.
 
-The column `var_name` contains the variable name. This can be RMR, CS, PCC, ATPase or TBARS (so far). 
+The column `var_name` contains the variable name. This can be RMR, CS, PCC, ATPase or TBARS. 
 
 The `var_measure` column refers to the measured value of the variable. 
 
