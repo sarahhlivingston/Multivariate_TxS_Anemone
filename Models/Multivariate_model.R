@@ -79,13 +79,15 @@ lattice::dotplot(ranef(m1_final))
 ############################
 
 # 3-way interaction emmeans
-ems_df <- emmeans(m1_final, ~ AT * TT * AS| var_name, type = "response") %>%
+em1 <- emmeans(m1_final, ~ AT * TT * AS| var_name, type = "response")
+ems_df <- confint(ems_df) %>%                 
   as.data.frame()
 plot(ems_df) 
 
 #contrasts
-contrast(ems_means,  by = "var_name")
-df_contrasts <- as.data.frame(confint(contrast(ems_means,  by = "var_name")))
+ctrst1 <- contrast(em1,  by = "var_name")
+df_contrasts <- confint(ctrst1) %>%                 
+  as.data.frame()
                    
 #emmeans plot as line graph
 ggplot(ems_df, aes(x = as.factor(TT), 
