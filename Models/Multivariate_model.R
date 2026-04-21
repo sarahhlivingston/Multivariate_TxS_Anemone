@@ -80,7 +80,7 @@ lattice::dotplot(ranef(m1_final))
 
 # 3-way interaction emmeans
 em1 <- emmeans(m1_final, ~ AT * TT * AS| var_name, type = "response")
-ems_df <- confint(ems_df) %>%                 
+ems_df <- confint(em1) %>%                 
   as.data.frame()
 plot(ems_df) 
 
