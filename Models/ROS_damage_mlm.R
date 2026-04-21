@@ -41,7 +41,7 @@ levels(df_emmeans$AS) <- paste ((levels(df_emmeans$AS)), "ppt")
 
 #emmeans plot
 emmeans_plot <- ggplot(df_emmeans, aes(x = as.factor(AT), 
-                   y = if("response" %in% names(ems_df)) response else emmean, 
+                   y = if("response" %in% names(df_emmeans)) response else emmean, 
                    color = as.factor(AT))) +
   geom_point(position = position_dodge(width = 0.2), 
              size = 4) +
